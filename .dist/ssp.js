@@ -23,7 +23,7 @@ function generate(length, range) {
 }
 function verify(problem, solution) {
   if (solution.length === 0)
-    throw new Error('solution cannot be empty set!');
+    return undefined;
   if (_.sum(solution) !== 0)
     throw new Error('solution does not sum to 0!');
   var set = _.transform(problem, (function(set, value) {
