@@ -37,6 +37,7 @@ function generate(length, range) {
 // problem: array of integers
 // solution: array of integers
 function verify(problem, solution) {
+  if (solution.length === 0) throw new Error('solution cannot be empty set!');
   if (_.sum(solution) !== 0) throw new Error('solution does not sum to 0!');
 
   const set = _.transform(problem, (set, value) => {
