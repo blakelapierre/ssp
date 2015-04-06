@@ -11,7 +11,7 @@ function generate(length, range) {
   var set = {};
   var generated = 0;
   while (generated < length) {
-    var candidate = Math.round(Math.random() * range) - (range / 2);
+    var candidate = Math.round(Math.random() * range - (range / 2));
     if (!set[candidate]) {
       set[candidate] = true;
       generated++;
