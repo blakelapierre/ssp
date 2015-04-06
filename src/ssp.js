@@ -24,7 +24,8 @@ function generate(length, range) {
     }
   }
 
-  return Object.keys(set);
+  // Not the best way to do this!
+  return _.map(Object.keys(set), value => parseInt(value));
 }
 
 

@@ -17,7 +17,9 @@ function generate(length, range) {
       generated++;
     }
   }
-  return Object.keys(set);
+  return _.map(Object.keys(set), (function(value) {
+    return parseInt(value);
+  }));
 }
 function verify(problem, solution) {
   if (_.sum(solution) !== 0)
